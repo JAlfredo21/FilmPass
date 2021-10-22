@@ -1,0 +1,231 @@
+@import url('https://font.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+/* Introdução das Variaveis */
+:root{
+    --cor-principal:#22254b;
+    --cor-secundaria:#373b69;
+}
+
+/* Corpo do site */
+body{
+    background-color: var(--cor-principal);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Cabeçalho do site */
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-secundaria);    
+}
+
+.logo{
+    display: flex;
+}
+
+.barra-pesquisa{
+    display: flex;
+    justify-content: center;
+}
+/* Ferramenta de Busca */
+.search{
+    background-color: transparent;
+    border: 2px solid var(--cor-principal);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+    font-family: inherit;
+}
+
+/* ativação da área de pesquisa */
+.search:focus{
+    outline: 0;
+    background-color: var(--cor-principal);
+}
+
+/* Placeholder da pesquisa */
+.search::placeholder{
+    color: #9393b9;
+}
+
+/* Disponibilização dos itens */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Elemento Filme */
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-secundaria);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagens dos Filmes */
+.movie img{
+    width: 100%;
+}
+
+/* Informações dos filmes */
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Titulo do fislme */
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: var(--cor-principal);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.movie-info span.price{
+    background-color: green;
+}
+
+/* Avaliação boa filme */
+.movie-info span.green{
+    color: rgb(97, 238, 97);
+}
+
+/* Avaliação média filme */
+.movie-info span.orange{
+    color: rgb(252, 180, 46);
+}
+
+/* Avaliação ruim filme */
+.movie-info span.red{
+    color: rgb(255, 28, 28);
+}
+
+/* Elemento Sinopse */
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(106, 81, 196);
+    color: white;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+/* transformação */
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+/* Tags */
+#tags{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color: white;
+    padding: 10px 25px;
+    background-color: rgb(98, 111, 226);
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: rgb(53, 67, 187);
+}
+
+/* No match results */
+.no-results{
+    color: white;
+}
+
+/* Paginação */
+.pagination{
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Paginação */
+.page{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.page.disabled{
+    cursor: not-allowed;
+    color: gray;
+}
+
+.current{
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Colocar no carrinho */
+.add-cart{
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    
+}
+
+.add-cart:hover{
+    background-color: chartreuse;
+}
+
+/* botão favoritos */
+.add-fav{
+    background-color: rgb(252, 249, 69);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+
+.add-fav:hover{
+    background-color: lightyellow;
+}
+
